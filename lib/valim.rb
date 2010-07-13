@@ -43,7 +43,7 @@ module Kernel
   end
   alias :deny? :deny
 
-  def / o
+  def /(o)
     self
   end
 
