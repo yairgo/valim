@@ -1,5 +1,6 @@
 $:.unshift File.expand_path('../../lib', __FILE__)
 require 'valim'
+require 'stringio'
 
 describe "Valim" do
   it "has doubts" do
@@ -65,6 +66,26 @@ describe "Valim" do
     it "confirms or denies" do
       false.confirm_deny?.should == deny
       nil.confirm_deny?.should == deny
+    end
+  end
+
+  describe "common" do
+    it "says come on" do
+      common.to_s.should == "come on"
+    end
+
+    it "accepts common.js" do
+      common.js.should == "common.js"
+    end
+
+    it "accepts other commons" do
+      common.carl.should == "common.carl"
+    end
+  end
+
+  describe "brodelize" do
+    it "makes brodels" do
+      brodelize(2).to_s.should == "brodel\nbrodel\n"
     end
   end
 end

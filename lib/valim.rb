@@ -6,6 +6,30 @@ module Valim
     !!yield
   end
   extend self
+
+  class Common
+    def to_s
+      "come on"
+    end
+
+    def js
+      "common.js"
+    end
+
+    def method_missing(meth, *)
+      "common.#{meth}"
+    end
+  end
+
+  class Brodelizer
+    def initialize(amount)
+      @amount = amount
+    end
+
+    def to_s
+      "brodel\n" * @amount
+    end
+  end
 end
 
 module Kernel
@@ -35,6 +59,13 @@ module Kernel
     raise Valim::DoubleFacepalmError, "**double-facepalm**"
   end
 
+  def common
+    Valim::Common.new
+  end
+
+  def brodelize(brodels)
+    Valim::Brodelizer.new(brodels)
+  end
 end
 
 class FalseClass
