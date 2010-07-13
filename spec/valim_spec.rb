@@ -1,6 +1,4 @@
-$:.unshift File.expand_path('../../lib', __FILE__)
-require 'valim'
-require 'stringio'
+require 'spec_helper'
 
 describe "Valim" do
   it "has doubts" do

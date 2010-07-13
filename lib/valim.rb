@@ -79,3 +79,26 @@ class TrueClass
     "confirm"
   end
 end
+
+class String
+  CONSONANTS = "bcdfghjklmnpqrstvwxz"
+
+  def brotate
+    current    = self
+    brotated   = ""
+
+    while m = /\b([#{CONSONANTS}])?r?(o)(?=\w{2})/i.match(current)
+      current = m.post_match
+      brotated << m.pre_match
+
+      if m[1] && m[1].upcase == m[1]
+        brotated << "Bro"
+      else
+        brotated << "bro"
+      end
+    end
+
+    brotated << current
+    brotated
+  end
+end
