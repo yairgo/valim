@@ -23,7 +23,7 @@ Don't be stupid
 
 Adds brotate to String
 
-"rotate".brotate => "brotate"
+    "rotate".brotate => "brotate"
 
 
-"Poseidon, king of the ocean".brotate =>"Broseidon, king of the brocean"
+    "Poseidon, king of the ocean".brotate =>"Broseidon, king of the brocean"
