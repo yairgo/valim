@@ -20,3 +20,10 @@ Don't be stupid
         (count >= x).confirm / deny?
       end
     end
+
+Adds brotate to String
+
+"rotate".brotate => "brotate"
+
+
+"Poseidon, king of the ocean".brotate =>"Broseidon, king of the brocean"
